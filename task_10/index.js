@@ -33,8 +33,64 @@ let dataMan = function() {
                 }
         }
         this.show = function() {
-            console.log(this.result);
+            console.log(this.result)
         }
+
+            this.create = function(tagName) {
+               return document.createElement(tagName)
+            }
+
+            this.insert = function(to, element, beforeElement) {
+                if (!to || !element) return false;
+
+                if (!beforeElement) {to.appendChild(element)}
+                else {to.insertBefore(element, beforeElement)};
+            }
+
+            this.search = function(selector) {
+                document.querySelector(selector)
+            }
+
+            this.html = function(element, value) {
+               return element.innerHTML = value;
+            }
+
+            this.attr = function(element, attrs) {
+                attrs.forEach(attr => {
+                    element.setAttribute(attr.name, attr.value)  
+                });
+                
+            }
+
+            this.append = function(element, text) {
+                let newText = document.createTextNode(text)
+                element.appendChild(newText)
+            }
+
+            this.addClass = function(element, className) {
+                element.classList.add(className)
+            }
+
+            this.removeClass = function(element, className) {
+                element.classList.remove(element, className)
+            }
+
+            this.toggleClass = function(element, className) {
+                element.classList.toggle(className)
+            }
+            
+            this.hasClass = function(element, className) {
+                let cl = element.classList;
+                for(let i = 0; i < classes.length; i++){
+                if(cl[i] == className){
+                return true}
+                else false;
+            }
+            }
+
+            this.on = function(element, eventName, funcName) {
+                element.addEventListener(eventName, funcName)
+            }
 }
 
 let man = function() {
@@ -46,7 +102,7 @@ let man = function() {
     this.phone();
     this.operation();
     this.show();
-    }
-let men = new man()
+}
+let men = new man();
 
 console.log(men);
