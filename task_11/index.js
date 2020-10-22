@@ -45,10 +45,10 @@ class ContactsApp extends Contacts {
             cont.classList.add("contact_card");
             cont.setAttribute("index", index);
             cont.innerHTML = `
-                <p>Name: ${person.name}</p>
-                <p>Email: ${person.email}</p>
-                <p>Address: ${person.address}</p>
-                <p>Phone: ${person.phone}</p>
+                <p>Name: ${person.user.data.name}</p>
+                <p>Email: ${person.user.data.email}</p>
+                <p>Address: ${person.user.data.address}</p>
+                <p>Phone: ${person.user.data.phone}</p>
                 
                 <i class="fas fa-trash delete_btn" index=${index}></i>
             `; 
