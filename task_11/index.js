@@ -89,3 +89,4 @@ const contactContainer = document.querySelector(".contact_container");
 
 form.addEventListener("submit", handleSubmit);
 contactContainer.addEventListener("click", deleteHandler);
+// без изменений
