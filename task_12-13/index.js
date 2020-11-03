@@ -97,7 +97,7 @@ class ContactsApp extends Contacts {
 
     set storage(data) {
         localStorage.setItem('addressBook', JSON.stringify(data))
-        document.cookie = "user=" + "David" + ";max-age=" + (3600 * 34 * 10)
+        document.cookie = "user=" + "David" + ";max-age=" + (3600 * 24 * 10)
     }
 }
 
