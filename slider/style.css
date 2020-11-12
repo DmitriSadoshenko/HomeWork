@@ -1,0 +1,81 @@
+
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+body {
+	max-width: 1200px;
+    padding: 0;
+	margin: 0 auto;
+	font-family: 'Lato', sans-serif;
+}
+
+h1 {
+	text-align: center;
+	font-size: 50px;
+	color: rgb(45, 94, 52);
+}
+
+.fade-slider {
+	width: 100%;
+    height: 100%;
+	overflow: hidden;
+	position: relative;
+	margin: 15px auto 0 auto;
+	border-radius: 10px;
+}
+.main-slide {
+	width: 100%;
+	height: 100%;
+	
+	border-radius: 10px;
+}
+.arrow {
+	line-height: 1;
+	color: rgb(45, 94, 52);
+	font-size: 45px;
+	position: absolute;
+	top: calc(50% - 17px);
+	z-index: 3;
+	cursor: pointer;
+	user-select: none;
+}
+.arrow.prev {
+	left: 5px;
+	transform: rotate(180deg);
+}
+.arrow.next {
+	right: 5px;
+}
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
